@@ -26,7 +26,7 @@ class MovieSerializer(serializers.Serializer):
 
 class GenreSerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
-    name = serializers.CharField(max_length=100)
+    name = serializers.CharField(max_length=255)
 
     def create(self, validated_data):
         return Genre.objects.create(**validated_data)

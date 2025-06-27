@@ -4,6 +4,7 @@ from rest_framework import status, viewsets
 from rest_framework import generics, mixins
 from django.shortcuts import get_object_or_404
 from rest_framework.views import APIView
+from rest_framework.viewsets import ModelViewSet
 
 from cinema.models import Movie, Genre, Actor, CinemaHall
 from cinema.serializers import (
